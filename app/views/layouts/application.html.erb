@@ -1,15 +1,82 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>SbkStroi</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
-
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
-
-  <body>
-    <%= yield %>
-  </body>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> <%= yield(:title) %></title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&amp;subset=devanagari,latin-ext" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/fonts/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/min/styles/bundle.min.css">
+  <link rel="shortcut icon" href="/assets/images/favicon.png">
+</head>
+<body class="royal_loader">
+<div id="page">
+  <nav id="menu">
+    <ul>
+      <li><a href="/">О компании</a></li>
+      <li><a href="/services">Услуги</a>
+        <ul>
+          <li><a href="/services">Доставка бетона и раствора</a></li>
+          <li><a href="/services">Услуги АБН (автобетононасоса)</a></li>
+          <li><a href="/services">Ж/Д перевалка</a></li>
+        </ul>
+      </li>
+      <li><a href="/laboratory">Лаборатория</a></li>
+      <li><a href="/production">Продукция</a></li>
+      <li><a href="#">Поставщикам</a></li>
+      <li><a href="/apartments-for-sale">Продажа квартир</a></li>
+      <li><a href="/contacts">Контакты</a></li>
+    </ul>
+  </nav>
+  <header class="header-home" id="header-home-2">
+    <h1 class="logo"><a href="/"><img class="img-responsive" src="/assets/images/logo-on-dark.png" alt="Image" width="150" height="120"></a></h1>
+    <nav class="main-nav" id="main-nav">
+      <ul>
+        <li><a href="/">О компании</a></li>
+        <li><a href="/services">Услуги</a>
+          <ul>
+            <li><a href="/services#delivery">Доставка бетона и раствора</a></li>
+            <li><a href="/services#abn">Услуги АБН (автобетононасоса)</a></li>
+            <li><a href="/services#transshipment">Ж/Д перевалка</a></li>
+          </ul>
+        </li>
+        <li><a href="/production">Продукция</a></li>
+        <li><a href="/laboratory">Лаборатория</a></li>
+        <li><a href="#">Поставщикам</a></li>
+        <li><a href="/apartments-for-sale">Продажа квартир</a></li>
+        <li><a href="/contacts">Контакты</a></li>
+      </ul>
+    </nav><a class="btn-menu-mobile" href="#menu"><span class="lnr lnr-menu"></span></a>
+  </header>
+  <footer class="footer-home-1 dark">
+    <div class="footer-inner">
+      <div class="row">
+        <div class="col-md-6"><a class="logo" href="/"><img class="img-responsive" src="/assets/images/logo-on-dark.png" alt="Image" width="100" height="111"></a>
+          <ul class="footer-link-2">
+            <li><a href="#">Career</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms &amp; Conditions</a></li>
+            <li><a href="#">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <ul class="widget-social-list">
+            <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+            <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <div class="copyright">Copyright © 2016<br> All Right Reserved. Designed by Crophos</div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>
+</body><a class="fixbtt bg-hover-theme" id="to-the-top"><i class="fa fa-chevron-up"></i></a>
+<script type="text/javascript" src="/min/js/all.min.js"></script>
 </html>

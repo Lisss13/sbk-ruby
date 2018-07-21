@@ -1,0 +1,2 @@
+module ApartmentsForSaleHelper
+end
