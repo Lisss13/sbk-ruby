@@ -18,7 +18,7 @@
 <div id="page">
   <nav id="menu">
     <ul>
-      <li><a href="/">О компании</a></li>
+      <li><a href="/">Главная</a></li>
       <li><a href="/services">Услуги</a>
         <ul>
           <li><a href="/services">Доставка бетона и раствора</a></li>
@@ -28,16 +28,15 @@
       </li>
       <li><a href="/laboratory">Лаборатория</a></li>
       <li><a href="/production">Продукция</a></li>
-      <li><a href="#">Поставщикам</a></li>
       <li><a href="/apartments-for-sale">Продажа квартир</a></li>
       <li><a href="/contacts">Контакты</a></li>
     </ul>
   </nav>
-  <header class="header-home" id="header-home-2">
+  <header class="<%= path == '/' ? 'header-home bg-transparent fixed' : 'header-home' %>" id="<%= path == '/' ? 'stick' : 'header-home-2' %>">
     <h1 class="logo"><a href="/"><img class="img-responsive" src="/assets/images/logo-on-dark.png" alt="Image" width="150" height="120"></a></h1>
     <nav class="main-nav" id="main-nav">
       <ul>
-        <li><a href="/">О компании</a></li>
+        <li><a href="/">Главная</a></li>
         <li><a href="/services">Услуги</a>
           <ul>
             <li><a href="/services#delivery">Доставка бетона и раствора</a></li>
@@ -53,6 +52,7 @@
       </ul>
     </nav><a class="btn-menu-mobile" href="#menu"><span class="lnr lnr-menu"></span></a>
   </header>
+  <%= yield %>
   <footer class="footer-home-1 dark">
     <div class="footer-inner">
       <div class="row">
@@ -71,7 +71,7 @@
           </ul>
         </div>
         <div class="col-md-3">
-          <div class="copyright">Copyright © 2016<br> All Right Reserved. Designed by Crophos</div>
+          <div class="copyright">Авторские права © 2017<br> Все права защищены. Дизайн Crophos</div>
         </div>
       </div>
     </div>
@@ -79,4 +79,8 @@
 </div>
 </body><a class="fixbtt bg-hover-theme" id="to-the-top"><i class="fa fa-chevron-up"></i></a>
 <script type="text/javascript" src="/min/js/all.min.js"></script>
+<% if path == '/contacts' %>
+  <script src="https://maps.googleapis.com/maps/api/js?key=&sensor=false&extension=.js"></script>
+  <script src="/assets/js/plugins/contact.js"></script>
+<% end %>
 </html>

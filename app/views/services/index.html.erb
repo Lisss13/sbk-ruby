@@ -1,2 +1,85 @@
-<h1>Services#index</h1>
-<p>Find me in app/views/services/index.html.erb</p>
+<% content_for :title, 'Услуги' %>
+<section class="boxed no-padding bg-img" style="background-image: url(/assets/images/bg/bg-about.jpg);">
+  <div class="sub-header depen-on-img">
+    <img src="/assets/images/bg/bg-about.jpg" alt="Image" class="img-responsive">
+    <div class="sub-header-inner center-center">
+      <h2>Продукция и Услуги</h2>
+      <ol class="breadcrumb">
+        <li><a href="/">Главная</a></li>
+        <li class="active">Продукция и Услуги</li>
+      </ol>
+    </div>
+  </div>
+</section>
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3 col-sm-3 text-right">
+        <h3 class="title-with-sub">История</h3>
+        <span class="sub-title color-theme">О компании</span>
+      </div>
+      <div class="col-md-7 col-sm-10">
+        <p>
+          Cras mattis consectetur purus sit amet fermentum. Curabitur
+          blandit tempus porttitor. Sed posuere consectetur est at lobortis.
+          Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget
+          lacinia odio sem nec elit. Vestibulum id ligula porta felis euismod semper.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<section>
+  <div class="container">
+    <h2> Чем мы занимаемся</h2>
+    <div class="row">
+      <div class="col-md-3 col-sm-3">
+        <ul class="nav nav-tabs tabs-left">
+          <li>
+            <h4><a href="#Commercial" data-toggle='tab'>Доставка бетона <br /> и раствора</a></h4>
+          </li>
+          <li>
+            <h4><a href="#Interior" data-toggle='tab'>Услуги АБН</a></h4>
+          </li>
+          <li>
+            <h4><a href="#Renovation" data-toggle='tab'>Ж/Д перевалка</a></h4>
+          </li>
+        </ul>
+      </div>
+      <div class="col-md-9 col-sm-9">
+        <div class="tab-content">
+          <div id="Commercial" class="tab-pane fade in active">
+            <img src="/assets/images/content/about2.png" alt="Image" class="img-responsive">
+            <div class="clearfix mgt-30"></div>
+            <p>
+              Donec id elit non mi porta gravida at eget metus. Nulla vitae elit libero, a pharetra augue. Gravida at eget metus.
+            </p>
+            <p>
+              Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Cras mattis consectetur purus sit amet fermentum.
+              Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Sed posuere consectetur est at lobortis. Vestibulum id ligula porta felis euismod semper.
+            </p>
+          </div>
+          <div id="Interior" class="tab-pane fade">
+            <img src="/assets/images/blog/detail1.png" alt="Image" class="img-responsive">
+            <div class="clearfix mgt-30"></div>
+            <p>Donec id elit non mi porta gravida at eget metus. Nulla vitae elit libero, a pharetra augue. Gravida at eget metus.</p>
+            <p>
+              Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Cras mattis consectetur purus sit amet fermentum. Integer
+              posuere erat a ante venenatis dapibus posuere velit aliquet. Sed posuere consectetur est at lobortis. Vestibulum id ligula porta felis euismod semper.
+            </p>
+          </div>
+          <div id="Renovation" class="tab-pane fade">
+            <img src="/assets/images/blog/3.jpg" alt="Image" class="img-responsive">
+            <div class="clearfix mgt-30"></div>
+            <p>Donec id elit non mi porta gravida at eget metus. Nulla vitae elit libero, a pharetra augue. Gravida at eget metus.</p>
+            <p>
+              Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Cras mattis consectetur purus sit amet fermentum. Integer posuere erat
+              a ante venenatis dapibus posuere velit aliquet. Sed posuere consectetur est at lobortis. Vestibulum id ligula porta felis euismod semper.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="line-top-right w-680"></div>
+</section>
