@@ -1,3 +1,84 @@
 <% content_for :title, 'Продукция компании' %>
-<h1>Production#index</h1>
-<p>Find me in app/views/production/index.html.erb</p>
+<section class="boxed no-padding bg-img " style="background-image: url(assets/images/bg/bg-shop.jpg);">
+  <div class="sub-header depen-on-img">
+    <img src="/assets/images/bg/bg-shop.jpg" class="img-responsive" alt="Image">
+    <div class="sub-header-inner center-center">
+      <h2>Продукция</h2>
+      <ol class="breadcrumb">
+        <li>
+          <a href="#">Главная</a>
+        </li>
+        <li class="active">Продукция</li>
+      </ol>
+    </div>
+  </div>
+</section>
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="woocommerce">
+        <div class="col-md-12">
+          <form action="get" method="get">
+            <table class="shop_table  shop_table_responsive cart" >
+              <thead>
+              <tr>
+                <th class="product-thumbnail"></th>
+                <th class="product-name" >PRODUCT</th>
+                <th class="product-price">PRICE</th>
+                <th class="product-quantity">QUANTITY</th>
+                <th class="product-subtotal">TOTAL</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr class="cart_item">
+                <td class="product-thumbnail">
+                  <p>324</p>
+                </td>
+                <td class="product-name" data-title="Product">
+                  <p>Artistic Wood Hanger</p>
+                </td>
+                <td class="product-price" data-title="Price">
+                  <span class="woocommerce-Price-amount amount">
+                    <span class="woocommerce-Price-currencySymbol">$</span>120.00
+                  </span>
+                </td>
+                <td class="product-quantity" data-title="Quantity">
+                  <div class="quantity">
+                    <p></p>
+                  </div>
+                </td>
+                <td class="product-subtotal" data-title="Total">
+                  <span class="woocommerce-Price-amount amount">
+                    <span class="woocommerce-Price-currencySymbol">$</span>240.00
+                  </span>
+                </td>
+              </tr>
+              <tr class="cart_item">
+                <td class="product-thumbnail">
+                  <p class="text-wight">zasasfafa</p>
+                </td>
+                <td class="product-name" data-title="Product">
+                  <a href="#">Artistic Wood Hanger</a>
+                </td>
+                <td class="product-price" data-title="Price">
+                  <span class="woocommerce-Price-amount amount">
+                    <span class="woocommerce-Price-currencySymbol">$</span>120.00
+                  </span>
+                </td>
+                <td class="product-quantity" data-title="Quantity">
+                  <p>sdfadsfdsfasf 434 3 </p>
+                </td>
+                <td class="product-subtotal" data-title="Total">
+                  <span class="woocommerce-Price-amount amount">
+                    <span class="woocommerce-Price-currencySymbol">$</span>240.00
+                  </span>
+                </td>
+              </tr>
+              </tbody>
+            </table>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

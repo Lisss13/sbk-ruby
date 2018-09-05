@@ -1,0 +1,26 @@
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="comments-area">
+          <h2>Вход</h2>
+            <%= form_for(resource, as: resource_name, url: session_path(resource_name), class: 'contact-form') do |f| %>
+            <div class="col-md-4 col-sm-6">
+              <%= f.label :email %><br />
+              <%= f.email_field :email, autofocus: true, autocomplete: "email", class: 'contact-input' %>
+            </div>
+            <div class="col-md-4 col-sm-6">
+              <%= f.label :password %><br />
+              <%= f.password_field :password, autocomplete: "off", class: 'contact-input' %>
+            </div>
+            <div class="clearfix"></div>
+            <div class="col-md-4">
+              <%= f.button "Вход", class: 'ot-btn border-dark btn-contact' %>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="line-top-right w-680"></div>
+</section>
