@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resource :feedbacks
+  get '/feedback/index' => 'feedbacks#index'
   devise_for :users
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   get '/contacts', to: 'contacts#index'

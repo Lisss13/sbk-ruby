@@ -22,58 +22,38 @@
             <table class="shop_table  shop_table_responsive cart" >
               <thead>
               <tr>
-                <th class="product-thumbnail"></th>
-                <th class="product-name" >PRODUCT</th>
-                <th class="product-price">PRICE</th>
-                <th class="product-quantity">QUANTITY</th>
-                <th class="product-subtotal">TOTAL</th>
+                <th class="product-thumbnail">Название</th>
+                <th class="product-price">Описание</th>
+                <th class="product-price text-center">Цена</th>
+                <th class="product-subtotal text-right">Колличество</th>
               </tr>
               </thead>
               <tbody>
-              <tr class="cart_item">
-                <td class="product-thumbnail">
-                  <p>324</p>
-                </td>
-                <td class="product-name" data-title="Product">
-                  <p>Artistic Wood Hanger</p>
-                </td>
-                <td class="product-price" data-title="Price">
-                  <span class="woocommerce-Price-amount amount">
-                    <span class="woocommerce-Price-currencySymbol">$</span>120.00
-                  </span>
-                </td>
-                <td class="product-quantity" data-title="Quantity">
-                  <div class="quantity">
-                    <p></p>
-                  </div>
-                </td>
-                <td class="product-subtotal" data-title="Total">
-                  <span class="woocommerce-Price-amount amount">
-                    <span class="woocommerce-Price-currencySymbol">$</span>240.00
-                  </span>
-                </td>
-              </tr>
-              <tr class="cart_item">
-                <td class="product-thumbnail">
-                  <p class="text-wight">zasasfafa</p>
-                </td>
-                <td class="product-name" data-title="Product">
-                  <a href="#">Artistic Wood Hanger</a>
-                </td>
-                <td class="product-price" data-title="Price">
-                  <span class="woocommerce-Price-amount amount">
-                    <span class="woocommerce-Price-currencySymbol">$</span>120.00
-                  </span>
-                </td>
-                <td class="product-quantity" data-title="Quantity">
-                  <p>sdfadsfdsfasf 434 3 </p>
-                </td>
-                <td class="product-subtotal" data-title="Total">
-                  <span class="woocommerce-Price-amount amount">
-                    <span class="woocommerce-Price-currencySymbol">$</span>240.00
-                  </span>
-                </td>
-              </tr>
+              <% @production.each do |product| %>
+                <tr class="cart_item">
+                  <td class="product-thumbnail">
+                    <a type="button" class="modal-w" data-toggle="<%= "modal-#{product.id}" %>" data-target=".bd-example-modal-sm">
+                      <%= product.name %>
+                    </a>
+                  </td>
+                  <td class="product-subtotal" data-title="Total" style="max-width: 245px;">
+                    <span class="woocommerce-Price-amount amount">
+                      <p><%= product.description %></p>
+                    </span>
+                  </td>
+                  <td class="product-price text-center" data-title="Price">
+                    <span class="woocommerce-Price-amount amount">
+                      <%= product.price %>
+                      <span class="woocommerce-Price-currencySymbol">руб.</span>
+                    </span>
+                  </td>
+                  <td class="product-subtotal text-right" data-title="Quantity">
+                    <div class="quantity">
+                      <p style="padding-right: 40px;"><%= product.amount %></p>
+                    </div>
+                  </td>
+                </tr>
+              <% end %>
               </tbody>
             </table>
           </form>
@@ -82,3 +62,25 @@
     </div>
   </div>
 </section>
+<% @production.each do |product| %>
+  <div class="modal bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="<%= "modal-#{product.id}" %>" aria-hidden="true">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <div class="modal-body">
+          <%= product.description %>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="<%= "modal-#{product.id}" %>">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>
+<style>
+  .modal-backdrop {
+    display: none;
+  }
+  .modal-w {
+    cursor: pointer;
+  }
+</style>

@@ -1,0 +1,17 @@
+<%= form_for Feedback.new, class: 'on-dark' do |f| %>
+  <div class="col-md-4 col-sm-6">
+    <%= f.text_field :name, class: 'contact-input', placeholder: 'Имя' %>
+    <%= f.text_field :phone, class: 'contact-input', placeholder: 'Номер телефона' %>
+  </div>
+  <div class="col-md-4 col-sm-6">
+    <%= f.text_field :email, class: 'contact-input', placeholder: 'E-Mail' %>
+    <%= f.text_field :subject, class: 'contact-input', placeholder: 'Тема' %>
+  </div>
+  <div class="col-md-4 col-sm-6">
+    <%= f.text_area :massage, placeholder: 'Сообщение', class: 'textarea-contact' %>
+  </div>
+  <div class="clearfix"></div>
+  <div class="col-md-4">
+    <%= f.button 'Отправить сообщение', type: 'submit', class: 'ot-btn border-theme btn-contact' %>
+  </div>
+<% end %>

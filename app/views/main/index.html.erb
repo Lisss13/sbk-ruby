@@ -222,23 +222,7 @@
     </div>
     <div class="col-md-9">
       <div class="row">
-        <form action="POST" class="on-dark">
-          <div class="col-md-4 col-sm-6">
-            <input type="text" required="required" placeholder="Имя" class="contact-input">
-            <input type="text" required="required" placeholder="Номер телефона" class="contact-input">
-          </div>
-          <div class="col-md-4 col-sm-6">
-            <input type="email" required="required" placeholder="E-Mail" class="contact-input">
-            <input type="text" required="required" placeholder="Тема" class="contact-input">
-          </div>
-          <div class="col-md-4 col-sm-6">
-            <textarea rows="4" placeholder="Сообщение" class="textarea-contact"></textarea>
-          </div>
-          <div class="clearfix"></div>
-          <div class="col-md-4">
-            <button class="ot-btn border-theme btn-contact" type="submit">Отправить сообщение</button>
-          </div>
-        </form>
+        <%= render 'shared/feedback' %>
       </div>
     </div>
   </div>

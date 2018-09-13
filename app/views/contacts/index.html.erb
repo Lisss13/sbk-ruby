@@ -58,23 +58,7 @@
       <div class="col-md-12">
         <div class="comments-area">
           <h2>СВЯЗАТЬСЯ С НАМИ</h2>
-          <form action="POST" class="contact-form">
-            <div class="col-md-4 col-sm-6">
-              <input type="text" class="contact-input" required="required" placeholder="Имя" type="text">
-              <input type="text" class="contact-input" required="required" placeholder="Номер телефона" type="text">
-            </div>
-            <div class="col-md-4 col-sm-6">
-              <input type="text" class="contact-input" required="required" placeholder="E-Mail" type="email">
-              <input type="text" class="contact-input" required="required" placeholder="Тема" type="text">
-            </div>
-            <div class="col-md-4 col-sm-6">
-              <textarea cols="30" rows="4" class="textarea-contact" placeholder="Сообщение"></textarea>
-            </div>
-            <div class="clearfix"></div>
-            <div class="col-md-4">
-              <button class="ot-btn border-dark btn-contact" type="submit">Отправить сообение</button>
-            </div>
-          </form>
+          <%= render 'shared/feedback' %>
         </div>
       </div>
     </div>
