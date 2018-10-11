@@ -1,0 +1,73 @@
+/* Reset
+----------------------------------------------------------*/
+h1,h2,h3,h4,h5,h6{line-height: 1.2;color:#333131;font-family: @main-font;margin-top:0;}
+h1{font-size:40px;letter-spacing: 3px;}
+h2{font-size:38px;margin-bottom: 40px;letter-spacing: 3px;}
+h3{font-size:24px;letter-spacing: 3px;}
+h4{font-size:20px;}
+h5{font-size:16px;margin-bottom:20px;font-weight: 500;}
+h6{font-size:14px;}
+
+
+a{text-decoration: none;&:hover{text-decoration:none;}}
+a:hover,a:focus{outline: none;text-decoration: none;}
+body
+{
+	font-family: @main-font;
+	font-size: 14px;
+	line-height: 24px;
+	color:@sub-color;
+	font-weight: 300;
+}
+
+ul
+{
+	margin:0;padding-left:0;
+}
+section
+{
+	 padding:80px 0;
+   position: relative;
+   overflow: hidden;
+}
+
+::selection {
+  background: @main-color;
+  color:#fff; /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  background: @main-color;
+  color:#fff; /* Gecko Browsers */
+}
+select.custom-select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding: 0px 30px 0px 0px;
+    border: none;
+}
+.custom-select{width: 100%;border-bottom: 1px solid @sub-color;}
+.custom-select:focus{border-color:@main-color!important;}
+select.custom-select
+    {
+      background: url(images/icon/down.png) no-repeat;
+      background-position: right 10px top 0px;
+    }
+input[type=text] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+input[type=email] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+::-webkit-scrollbar {
+    width: 0px;
+    height: 10px;
+    }   
+
+/* ==========================================================================
+   Bootstrap Custom
+   ========================================================================== */
