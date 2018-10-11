@@ -14,9 +14,9 @@ default: &default
   encoding: utf8
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   username: root
-  password:
-  socket: /tmp/mysql.sock
-
+  password: Qwerty12
+  host: 127.0.0.1
+ 
 development:
   <<: *default
   database: sbk_stroi_development
@@ -50,5 +50,3 @@ test:
 production:
   <<: *default
   database: sbk-stroi_production
-  username: sbk-stroi
-  password: <%= ENV['SBK-STROI_DATABASE_PASSWORD'] %>
